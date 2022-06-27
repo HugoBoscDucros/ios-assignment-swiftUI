@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+let assignmentCore = AssignmentCore()
+
 @main
 struct ios_assignment_swiftUIApp: App {
+    
+    var stateManager = StateManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FleetView()
+                .environmentObject(stateManager)
         }
     }
 }
